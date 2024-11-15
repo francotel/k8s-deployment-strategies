@@ -125,24 +125,24 @@ To have a better overview of the version, add `{{version}}` in the legend field.
 
 Recreate:
 
-![Kubernetes deployment recreate](recreate/grafana-recreate.png)
+![Kubernetes deployment recreate](01-recreate/grafana-recreate.png)
 
 Ramped:
 
-![Kubernetes deployment ramped](ramped/grafana-ramped.png)
+![Kubernetes deployment ramped](02-ramped/grafana-ramped.png)
 
 Blue/Green:
 
-![Kubernetes deployment blue-green](blue-green/grafana-blue-green.png)
+![Kubernetes deployment blue-green](03-blue-green/grafana-blue-green.png)
 
 Canary:
 
-![Kubernetes deployment canary](canary/grafana-canary.png)
+![Kubernetes deployment canary](04-canary/grafana-canary.png)
 
 A/B testing:
 
-![kubernetes ab-testing deployment](ab-testing/grafana-ab-testing.png)
+![kubernetes ab-testing deployment](05-ab-testing/grafana-ab-testing.png)
 
 Shadow:
 
-![kubernetes shadow deployment](shadow/grafana-shadow.png)
+![kubernetes shadow deployment](06-shadow/grafana-shadow.png)
