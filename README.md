@@ -40,8 +40,15 @@ will fail. To resolve this, install another driver such as
 [VirtualBox](https://www.virtualbox.org/) and add `--vm-driver virtualbox`
 to the command to be able to pull images.
 
+Install Helm
 ```
-$ minikube start --kubernetes-version v1.25.2 --memory 8192 --cpus 2
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod +x get_helm.sh
+./get_helm.sh
+```
+
+```
+$ minikube start --kubernetes-version v1.25.2 --memory 8192 --cpus 2 --driver=docker
 ```
 
 ## Visualizing using Prometheus and Grafana
