@@ -85,6 +85,11 @@ $ helm install grafana \
     grafana/grafana
 ```
 
+Port forwarding
+```
+kubectl port-forward service/grafana -n monitoring 3000:80 --address='0.0.0.0'
+```
+
 ### Setup Grafana
 
 Now that Prometheus and Grafana are up and running, you can access Grafana:
