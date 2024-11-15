@@ -40,13 +40,6 @@ will fail. To resolve this, install another driver such as
 [VirtualBox](https://www.virtualbox.org/) and add `--vm-driver virtualbox`
 to the command to be able to pull images.
 
-Install Helm
-```
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod +x get_helm.sh
-./get_helm.sh
-```
-
 ```
 $ minikube start --kubernetes-version v1.25.2 --memory 8192 --cpus 2 --driver=docker
 ```
@@ -61,10 +54,22 @@ the progress and performance of a deployment.
 To install Helm3, follow the instructions provided on their
 [website](https://github.com/kubernetes/helm/releases).
 
+Install Helm
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod +x get_helm.sh
+./get_helm.sh
+```
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+```
+
 ### Install Prometheus
 
 ```
-$ helm install prometheus prometheus-community/prometheus \
+helm install prometheus prometheus-community/prometheus \
     --create-namespace --namespace=monitoring \
     -f prometheus-override.yaml
 ```
