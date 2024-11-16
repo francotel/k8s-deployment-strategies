@@ -37,7 +37,7 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "continuous-YlBl"
           },
           "custom": {
             "axisLabel": "",
