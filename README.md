@@ -32,7 +32,7 @@ Before experimenting, checkout the following resources:
 ## Getting started
 
 These examples were created and tested on [Minikube](http://github.com/kubernetes/minikube)
-running with Kubernetes v1.25.2 and [Rancher Desktop](https://rancherdesktop.io/) running
+running with Kubernetes v1.29 and [Rancher Desktop](https://rancherdesktop.io/) running
 with Kubernetes 1.23.6.
 
 On MacOS the hypervisor VM does not have external connectivity so docker image pulls
@@ -41,7 +41,7 @@ will fail. To resolve this, install another driver such as
 to the command to be able to pull images.
 
 ```
-$ minikube start --kubernetes-version v1.25.2 --memory 8192 --cpus 2 --driver=docker
+$ minikube start --kubernetes-version v1.29 --memory 8192 --cpus 2 --driver=docker
 ```
 
 ## Visualizing using Prometheus and Grafana
