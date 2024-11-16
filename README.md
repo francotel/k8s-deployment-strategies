@@ -71,15 +71,9 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
 
-To review notes: 
-```bash
-helm get notes prometheus -n monitoring 
-helm get notes grafana -n monitoring
-```
-
 ### Install Prometheus
 
-```
+```bash
 helm install prometheus prometheus-community/prometheus \
     --create-namespace --namespace=monitoring \
     -f prometheus-override.yaml
@@ -87,8 +81,8 @@ helm install prometheus prometheus-community/prometheus \
 
 ### Install Grafana
 
-```
-$ helm install grafana \
+```bash
+helm install grafana \
     --namespace=monitoring \
     --set=adminUser=admin \
     --set=adminPassword=admin \
@@ -97,8 +91,14 @@ $ helm install grafana \
 ```
 
 Port forwarding
-```
+```bash
 kubectl port-forward service/grafana -n monitoring 3000:80 --address='0.0.0.0'
+```
+
+To review notes: 
+```bash
+helm get notes prometheus -n monitoring 
+helm get notes grafana -n monitoring
 ```
 
 ![Grafana Login](grafana-login.png)
@@ -114,7 +114,7 @@ To login, username: `admin`, password: `admin`.
 
 Then you need to connect Grafana to Prometheus, to do so, add a DataSource:
 
-```
+```bash
 Name: prometheus
 Type: Prometheus
 Url: http://prometheus-server
