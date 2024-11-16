@@ -71,7 +71,11 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
 
-To review notes: helm get notes prometheus -n monitoring | helm get notes grafana -n monitoring
+To review notes: 
+```bash
+helm get notes prometheus -n monitoring 
+helm get notes grafana -n monitoring
+```
 
 ### Install Prometheus
 
