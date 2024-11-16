@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: containersol/k8s-deployment-strategies
+        image: francotel/k8s-deployment-strategies:multiplatform
         # In case you want to use locally built images, use this:
         #imagePullPolicy: Never
         ports:
