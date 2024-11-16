@@ -25,10 +25,12 @@ $ kubectl apply -f app-v1.yaml
 
 # Test if the deployment was successful
 $ curl $(minikube service my-app --url)
+
 2018-01-28T00:22:04+01:00 - Host: host-1, Version: v1.0.0
 
 # To see the deployment in action, open a new terminal and run the following
 # command
+
 $ watch kubectl get po
 
 # Then deploy version 2 of the application
@@ -44,3 +46,13 @@ $ while sleep 0.1; do curl "$service"; done
 ```bash
 $ kubectl delete all -l app=my-app
 ```
+
+### Bonus using k8s commands
+
+```bash
+NODE_IP=$(kubectl get nodes -o jsonpath='{.items[0].status.addresses[?(@.type=="InternalIP")].address}')
+NODE_PORT=$(kubectl get svc my-app -o jsonpath='{.spec.ports[0].nodePort}')
+curl "$NODE_IP:$NODE_PORT"
+```
+
+![curl-01-recreate](test-curl.png)

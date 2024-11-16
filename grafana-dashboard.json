@@ -115,7 +115,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "sum(rate(http_requests_total{app=\"my-app\"}[2m])) by (version)",
+          "expr": "sum(rate(http_requests_total{app=\"my-app\"}[1m])) by (version)",
           "format": "time_series",
           "instant": false,
           "interval": "",
