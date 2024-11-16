@@ -17,7 +17,10 @@ $ go run main.go
 #### Build
 
 ```
-$ docker build -t containersol/k8s-deployment-strategies .
+$ docker buildx build \
+    --platform linux/amd64,linux/arm/v7,linux/arm64 \
+    -t francotel/k8s-deployment-strategies:multiplatform \
+    --push .
 ```
 
 #### Run
@@ -27,10 +30,9 @@ $ docker run -d \
     --name app \
     -p 8080:8080 \
     -p 9101:9101 \
-    --platform linux/amd64 \
     -h host-1 \
     -e VERSION=v1.0.0 \
-    containersol/k8s-deployment-strategies
+    francotel/k8s-deployment-strategies:multiplatform
 ```
 
 #### Test
