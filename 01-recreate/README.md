@@ -41,6 +41,8 @@ $ service=$(minikube service my-app --url)
 $ while sleep 0.1; do curl "$service"; done
 ```
 
+![while-curl](while-curl.png)
+
 ### Cleanup
 
 ```bash
