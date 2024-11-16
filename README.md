@@ -62,6 +62,7 @@ chmod +x get_helm.sh
 ```
 
 Review Prometheus: https://artifacthub.io/packages/helm/prometheus-community/prometheus
+
 Review Grafana: https://artifacthub.io/packages/helm/grafana/grafana
 
 ```
