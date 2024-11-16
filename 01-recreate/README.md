@@ -19,7 +19,7 @@ of the application.
 
 ## In practice
 
-```
+```bash
 # Deploy the first application
 $ kubectl apply -f app-v1.yaml
 
