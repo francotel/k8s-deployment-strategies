@@ -60,6 +60,10 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 chmod +x get_helm.sh
 ./get_helm.sh
 ```
+
+Review Prometheus: https://artifacthub.io/packages/helm/prometheus-community/prometheus
+Review Grafana: https://artifacthub.io/packages/helm/grafana/grafana
+
 ```
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add grafana https://grafana.github.io/helm-charts
