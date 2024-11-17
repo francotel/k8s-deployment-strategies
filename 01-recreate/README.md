@@ -3,8 +3,6 @@ Recreate deployment
 
 > Version A is terminated then version B is rolled out.
 
-![kubernetes recreate deployment](grafana-recreate.png)
-
 ![recreate deployment new](recreate-new.png)
 
 The recreate strategy is a dummy deployment which consists of shutting down
