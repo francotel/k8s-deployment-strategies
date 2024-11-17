@@ -141,7 +141,7 @@ Recreate:
 
 Ramped:
 
-![Kubernetes deployment ramped](02-ramped/grafana-ramped.png)
+![Kubernetes deployment ramped](02-ramped/grafana-request-ramped.png)
 
 Blue/Green:
 
