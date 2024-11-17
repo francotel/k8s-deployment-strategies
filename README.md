@@ -137,7 +137,7 @@ To have a better overview of the version, add `{{version}}` in the legend field.
 
 Recreate:
 
-![Kubernetes deployment recreate](01-recreate/grafana-recreate.png)
+![Kubernetes deployment recreate](01-recreate/grafana-new.png)
 
 Ramped:
 
