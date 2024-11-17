@@ -5,7 +5,7 @@ Recreate deployment
 
 ![kubernetes recreate deployment](grafana-recreate.png)
 
-![recreate deployment new](grafana-recreate-new.png)
+![recreate deployment new](recreate-new.png)
 
 The recreate strategy is a dummy deployment which consists of shutting down
 version A then deploying version B after version A is turned off. This technique
