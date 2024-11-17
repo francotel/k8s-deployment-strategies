@@ -29,8 +29,6 @@ $ watch kubectl get po
 # Then deploy version 2 of the application
 $ kubectl apply -f app-v2.yaml
 
-![app deploy vx](my-app-vx.png)
-
 # Wait for all the version 2 pods to be running
 $ kubectl rollout status deploy my-app-v2 -w
 deployment "my-app-v2" successfully rolled out
@@ -57,6 +55,8 @@ $ kubectl patch service my-app -p '{"spec":{"selector":{"version":"v1.0.0"}}}'
 # deployment
 $ kubectl delete deploy my-app-v1
 ```
+
+![app deploy vx](my-app-vx.png)
 
 ### Cleanup
 
