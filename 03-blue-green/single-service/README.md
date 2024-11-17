@@ -24,13 +24,13 @@ $ curl $(minikube service my-app --url)
 
 # To see the deployment in action, open a new terminal and run the following
 command:
-$ watch kubectl get po
+watch kubectl get po
 
 # Then deploy version 2 of the application
-$ kubectl apply -f app-v2.yaml
+kubectl apply -f app-v2.yaml
 
 # Wait for all the version 2 pods to be running
-$ kubectl rollout status deploy my-app-v2 -w
+kubectl rollout status deploy my-app-v2 -w
 deployment "my-app-v2" successfully rolled out
 
 # Side by side, 3 pods are running with version 2 but the service still send
