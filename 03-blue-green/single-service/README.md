@@ -38,22 +38,22 @@ deployment "my-app-v2" successfully rolled out
 
 # If necessary, you can manually test one of the pod by port-forwarding it to
 # your local environment:
-$ kubectl port-forward <name of pod> 8080:8080
+kubectl port-forward <name of pod> 8080:8080
 
 # Once your are ready, you can switch the traffic to the new version by patching
 # the service to send traffic to all pods with label version=v2.0.0
-$ kubectl patch service my-app -p '{"spec":{"selector":{"version":"v2.0.0"}}}'
+kubectl patch service my-app -p '{"spec":{"selector":{"version":"v2.0.0"}}}'
 
 # Test if the second deployment was successful
-$ service=$(minikube service my-app --url)
-$ while sleep 0.1; do curl "$service"; done
+service=$(minikube service my-app --url)
+while sleep 0.1; do curl "$service"; done
 
 # In case you need to rollback to the previous version
-$ kubectl patch service my-app -p '{"spec":{"selector":{"version":"v1.0.0"}}}'
+kubectl patch service my-app -p '{"spec":{"selector":{"version":"v1.0.0"}}}'
 
 # If everything is working as expected, you can then delete the v1.0.0
 # deployment
-$ kubectl delete deploy my-app-v1
+kubectl delete deploy my-app-v1
 ```
 
 ![app deploy vx](my-app-vx.png)
