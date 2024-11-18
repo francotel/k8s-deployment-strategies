@@ -44,6 +44,8 @@ to the command to be able to pull images.
 minikube start --kubernetes-version v1.29 --memory 8192 --cpus 2 --driver=docker
 ```
 
+![minikube start](minikube-start.png)
+
 ## Visualizing using Prometheus and Grafana
 
 The following steps describe how to setup Prometheus and Grafana to visualize
