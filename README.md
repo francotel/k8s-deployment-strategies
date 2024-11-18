@@ -41,7 +41,7 @@ will fail. To resolve this, install another driver such as
 to the command to be able to pull images.
 
 ```
-$ minikube start --kubernetes-version v1.29 --memory 8192 --cpus 2 --driver=docker
+minikube start --kubernetes-version v1.29 --memory 8192 --cpus 2 --driver=docker
 ```
 
 ## Visualizing using Prometheus and Grafana
@@ -107,7 +107,7 @@ helm get notes grafana -n monitoring
 Now that Prometheus and Grafana are up and running, you can access Grafana:
 
 ```
-$ minikube service grafana -n monitoring
+minikube service grafana -n monitoring
 ```
 
 To login, username: `admin`, password: `admin`.
