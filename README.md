@@ -104,6 +104,7 @@ helm get notes grafana -n monitoring
 ```
 
 ![Grafana Login](grafana-login.png)
+
 ### Setup Grafana
 
 Now that Prometheus and Grafana are up and running, you can access Grafana:
@@ -123,8 +124,12 @@ Url: http://prometheus-server
 Access: Server
 ```
 
+![connect datasource](datasource.png)
+
+![setting grafana](setting-grafana.png)
+
 Create a dashboard with a Time series or import
-the [JSON export](grafana-dashboard.json) - update the UID first of the Prometheus source. Use the following query:
+the [JSON export](grafana-dashboard.json) - update the UID first of the Prometheus source (view previous image, the uid is in the bar). Use the following query:
 
 ```
 sum(rate(http_requests_total{app="my-app"}[2m])) by (version)
